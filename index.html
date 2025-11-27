@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="css/collage.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="swipperslider/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="fonts/fontawesome/css/all.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-latest.min.js"></script> 		
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <title>Inficare</title>
+  
+<!-- Modal js start here-->
+<script>
+  var myModal = document.getElementById('myModal')
+  var myInput = document.getElementById('myInput')
+
+  myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script>
+<!-- Modal js end here-->
+ <script>
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header.topband");
+    if (window.scrollY > 20) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
+</script>
+</head>
+<body>
+<!-- Demo Request Form Modal start -->
+<div class="modal fade" id="DemoRequest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md cartmodalmar">
+    <div class="modal-content cartmodalcont">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Request a Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <form id="demoRequestForm">
+    
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Designation</label>
+      <input type="text" class="form-control" name="designation" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Institute / Company Name</label>
+      <input type="text" class="form-control" name="company" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email ID</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Contact Number</label>
+      <input type="tel" class="form-control" name="contact" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" name="message" rows="3"></textarea>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn primarybtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+    </div>
+  </div>
+</div>
+<!-- Demo Request Form Modal end -->
+
+
+<!-- header start -->
+<header class="topband">
+    <div class="header">
+    <div class="logomenuarea">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-4">
+          <div class="logo">
+  <a href="default.html">
+    <img src="img/Inficare_white_logo.png" class="logo-white" alt="logo">
+    <img src="img/Inficare_color_logo.png" class="logo-color" alt="logo">
+  </a>
+</div>
+        </div>
+        <div class="col-lg-10 col-8">
+        <div class="menucontainer">
+        <!-- menu start here -->
+        <div class="menuarea">
+          <div class="menu-overlay"></div>
+            <nav class="menu">
+              <div class="mobile-menu-head">
+                <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="menu-main">
+                <li class="menu-item-has-children"><a href="default.html">Home </a></li>
+                <li class="menu-item-has-children"><a href="aboutus.html">About us </a></li>
+                <li class="menu-item-has-children"><a href="whyinficare.html">Why Inficare? </a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Products <i class="fa fa-angle-down"></i></a>
+                  <div class="sub-menu single-column-menu">
+                    <ul>
+                      <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children"><a href="testimonials.html">Testimonials </a></li>
+                <li class="menu-item-has-children"><a href="clientele.html">Our Clientele</a></li>
+                <li class="menu-item-has-children"><a href="contact.html">Contact </a></li>
+                <li class="menu-item-has-children requestdemobtn hidemob"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Request a Demo </a></li>
+              </ul>
+            </nav>				
+        </div>
+        <div class="mobdemobtn hidedesk"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Demo </a></div>
+        <div class="mobile-menu-trigger"><span></span></div>
+        <!-- menu end here -->
+       
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+</header>
+<!-- header end -->
+
+
+<!-- collage start -->
+<div class="slider-container rev_slider_wrapper" style="height: 100vh;">
+					<div id="revolutionSlider" class="slider rev_slider" data-version="5.4.8" data-plugin-revolution-slider data-plugin-options="{'sliderLayout': 'fullscreen', 'delay': 0, 'gridwidth': 1170, 'gridheight': 700, 'disableProgressBar': 'on', 'responsiveLevels': [4096,1200,992,500], 'navigation' : {'arrows': { 'enable': true, 'style': 'arrows-style-1 arrows-primary' }, 'bullets': {'enable': true, 'style': 'bullets-style-1', 'h_align': 'center', 'v_align': 'bottom', 'space': 7, 'v_offset': 70, 'h_offset': 0}}}">
+						<ul>
+							<li class="slide-overlay slide-overlay-gradient slide-overlay-gradient-animated slide-overlay-level-8" data-transition="fade">
+								<img src="img/slide-corporate-11-1.jpg"  
+									alt=""
+									data-bgposition="center center" 
+									data-bgfit="cover" 
+									data-bgrepeat="no-repeat" 
+									class="rev-slidebg">
+
+								<div class="tp-caption text-color-light font-weight-normal"
+									data-frames='[{"delay":700,"speed":1000,"frame":"0","from":"opacity:0;y:-50%;","to":"opacity:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center"
+									data-y="center" data-voffset="['-100','-100','-100','-160']"
+									data-fontsize="['20','20','20','40']"
+									data-lineheight="['25','25','25','45']">INTRODUCING CLOUD-BASED SOLUTION</div>
+
+								<div class="tp-caption bg-color-light"
+									data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"opacity:0;x:-50%;","to":"opacity:0.4;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center"
+									data-y="center" data-voffset="['-65','-65','-65','-98']"
+									data-width="['362','362','362','575']"
+									data-height="8"></div>
+
+								<div class="tp-caption bg-color-light"
+									data-frames='[{"delay":1500,"speed":1000,"frame":"0","from":"opacity:0;x:50%;","to":"opacity:0.4;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center"
+									data-y="center" data-voffset="['65','65','65','98']"
+									data-width="['362','362','362','575']"
+									data-height="8"></div>
+
+								<div class="tp-caption bg-color-light"
+									data-frames='[{"delay":1850,"speed":1000,"frame":"0","from":"opacity:0;y:-50%;","to":"opacity:0.4;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center" data-hoffset="['-185','-185','-185','-284']"
+									data-y="center"
+									data-width="8"
+									data-height="['138','138','138','190']"></div>
+
+								<div class="tp-caption bg-color-light"
+									data-frames='[{"delay":1850,"speed":1000,"frame":"0","from":"opacity:0;y:50%;","to":"opacity:0.4;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center" data-hoffset="['185','185','185','284']"
+									data-y="center"
+									data-width="8"
+									data-height="['138','138','138','190']"></div>
+
+								<h1 class="tp-caption font-weight-extra-bold text-color-light"
+									data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:1.5;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;fb:0;","ease":"Power3.easeInOut"}]'
+									data-x="center"
+									data-y="center"
+									data-fontsize="['95','95','95','150']"
+									data-lineheight="['105','105','105','155']">WHIIZ ERP</h1>
+
+								<div class="tp-caption font-weight-light text-color-light ws-normal text-center"
+									data-frames='[{"from":"opacity:0;","speed":300,"to":"o:1;","delay":2300,"split":"chars","splitdelay":0.05,"ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+									data-x="center"
+									data-y="center" data-voffset="['110','110','110','200']"
+									data-width="['335','335','335','650']"
+									data-fontsize="['18','18','18','40']"
+									data-lineheight="['26','26','26','45']">A comprehensive platform designed for
+higher education institutions</div>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+<!-- collage end -->
+
+<div class="white_area">
+  <div class="container text-center">
+    <div class="mainheading">
+      <h2>India’s Leading Institutional & Enterprise Management Software</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p class="paragraph">Inficare Solutions offers a suite of software solutions designed to streamline business processes, enhance productivity, and optimize communication across institutions. Our products and services deliver measurable results — improving operational performance while reducing costs and complexity. </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-3 col-12">
+         <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">85</span>+</h3>
+                      Colleges </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">3</span>.1 Million+</h3>
+                      Student Process </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">25</span></h3>
+                      Years of Experience </div>
+                  </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="blue_area">
+  <div class="container">
+    <div class="mainheading text-center">
+      <h3 class="bluetxtcolor">Smart Solutions Built for Real Results</h3>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p class="paragraph">We build intelligent software that helps institutions work smarter, faster, and more efficiently. Every product is crafted to deliver real value and streamline your core operations. </p>
+        </div>
+      </div>
+      <div class="row topmargin30">
+        
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="productbg">
+            <a href="#">
+              <div class="productname">
+              <img src="img/whizz.png" alt="" /> <h4>Admission Process</h4>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12"><div class="paragrph text-center">Students can conveniently submit their admission applications online through an integrated and user-friendly interface. </div></div>
+            </div>
+            <div class="prod_one_bg text-center">
+              <img src="img/dummy.png" alt="" class="img-fluid" />
+            </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="productbg">
+            <div class="productname">
+              <img src="img/whizz.png" alt="" /> <h4>Student Data Management (SDM)</h4>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12"><div class="paragrph text-center">The Student Data Management System provides a centralized platform for efficiently maintaining, accessing, and managing all student... </div></div>
+            </div>
+            <div class="prod_two_bg text-center">
+              <img src="img/dummy.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="productbg2">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="productname2">
+              <img src="img/whizz.png" alt="" /> <h4>Fees Management (FM)</h4>
+            </div>
+            <div class="row">
+              <div class="col-md-9"><div class="paragrph left-mob-center">The Fees Management System simplifies and automates the complete process of fee collection, receipt generation, and financial reporting for educational institutions.</div></div>
+            </div>
+              </div>
+              <div class="col-md-6">
+                <div class="prod_three_bg text-center">
+              <img src="img/dummy.png" alt="" class="img-fluid" />
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="productbg">
+            <div class="productname">
+              <img src="img/whizz.png" alt="" /> <h4>Examination Management</h4>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12"><div class="paragrph text-center">The Examination Management Module is meticulously designed to simplify and automate the entire process of result preparation in complete... </div></div>
+            </div>
+            <div class="prod_four_bg text-center">
+              <img src="img/dummy.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="productbg">
+            <div class="productname">
+              <img src="img/whizz.png" alt="" /> <h4>WHIIZ Student Mobile App</h4>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12"><div class="paragrph text-center">Students can easily access all essential academic and financial information through the portal or mobile app. Students can easily view their pending...</div></div>
+            </div>
+            <div class="prod_five_bg text-center">
+              <img src="img/dummy.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+
+<div class="col-md-12">
+          <div class="productbg3">
+            <div class="row">
+              <div class="col-md-6 order-md-2">
+                <div class="productname2">
+              <img src="img/whizz.png" alt="" /> <h4>Document Management System (DMS)</h4>
+            </div>
+            <div class="row">
+              <div class="col-md-9"><div class="paragrph left-mob-center">A Document Management System (DMS) is a digital solution that helps organizations store, organize, manage, track, and share documents efficiently and securely.</div></div>
+            </div>
+              </div>
+              <div class="col-md-6 order-md-1">
+                <div class="prod_six_bg text-center">
+              <img src="img/dummy.png" alt="" class="img-fluid" />
+            </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="productbg">
+            <div class="productname">
+              <img src="img/whizz.png" alt="" /> <h4>Outcome Based Education (OBE)</h4>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12"><div class="paragrph text-center">Outcome Based Education (OBE) is specially designed to make the task of calculation of Course Outcomes (CO), Program Outcomes (PO)...</div></div>
+            </div>
+            <div class="prod_seven_bg text-center">
+              <img src="img/dummy.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xl-6 col-lg-6 col-md-12">
+          <div class="demobg">
+            <div class="productname">
+              <h4>Request a Demo</h4>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-10 col-md-12"><div class="paragrph text-center">Get a guided walkthrough of our products tailored to your institution’s needs. See how each solution simplifies workflows and boosts efficiency. <br/>  Experience the features, speed, and ease of use—live.</div></div>
+            </div>
+            <div class="prod_eight_bg">
+              <div class="demotxt">Explore our smart<br/>
+solutions in real time. <br/><br/>
+                <div class=""><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest" class="primarybtn btnsm">Request a Demo</a></div>
+
+              </div>
+              <div class="laptop"><img src="img/laptopgirl.png" alt=""/></div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+  </div>
+</div>
+
+<div class="white_area">
+  <div class="container">
+    <div class="milestonebox topmargin30">
+      <div class="mainheading text-center">
+        <h3 class="drkbluetxtcolor">Milestone</h3>
+        <div class="bluetxtcolor">A Journey Marked by Achievement</div>
+      </div>
+      <div class="swiper-container topmargin30">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2000.jpg" /></div>
+                <h2 class="heading-line">2000</h2>
+                <div class="milestonecontbox"><span>Founding Year</span> – Launched a small DOS-based application for result processing.</div>
+              </div>
+              
+            </div>
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2003.jpg" /></div>
+                <h2 class="heading-line">2003</h2>
+                <div class="milestonecontbox"><span>Reso</span> – Introduced a Windows-based Result Processing Software.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2004.jpg" /></div>
+                <h2 class="heading-line">2004</h2>
+                <div class="milestonecontbox"><span>Adme</span> – Released Admission Processing Software and began offering outsourced result processing services.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2005.jpg" /></div>
+                <h2 class="heading-line">2005</h2>
+                <div class="milestonecontbox"><span>Texo</span> – Developed Accounting & Inventory Software tailored for the textile industry.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2011.jpg" /></div>
+                <h2 class="heading-line">2011</h2>
+                <div class="milestonecontbox"><span>Reso v2</span> – Released an enhanced version of the Result Processing Software.</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2012.jpg" /></div>
+                <h2 class="heading-line">2012</h2>
+                <div class="milestonecontbox"><span>Adme v2</span> – Upgraded the Admission Processing Software to Version 2.</div>
+              </div>
+            </div>
+            
+
+
+
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2013.jpg" /></div>
+                <h2 class="heading-line">2013</h2>
+                <div class="milestonecontbox"><span>Texo v2 </span> – Introduced an improved version for the textile sector.</div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2016.jpg" /></div>
+                <h2 class="heading-line">2016</h2>
+                <div class="milestonecontbox"><span>Online Student Admission Form </span> – Enabled digital admission processing.</div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2019.jpg" /></div>
+                <h2 class="heading-line">2019</h2>
+                <div class="milestonecontbox"><span>Integrated Payment Gateway </span> – Facilitated secure online fee payments.</div>
+              </div>
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2023.jpg" /></div>
+                <h2 class="heading-line">2023</h2>
+                <div class="milestonecontbox"><span>WhiizERP</span> – Launched a comprehensive enterprise management system.</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="">
+                <div class="milestoneboximg"><img src="img/2024.jpg" /></div>
+                <h2 class="heading-line">2024</h2>
+                <div class="milestonecontbox"><span>WhiizERP</span> Introduced a mobile app for students ERP access.</div>
+              </div>
+            </div>
+
+
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    </div>
+
+<div class="row topmargin40">
+  <div class="col-md-7 left-mob-center">
+    <div class="mainheading">
+      <h3>About Our Clients</h3>
+      <div class="paragraph">Inficare Solutions offers a suite of software solutions designed to streamline business processes, enhance productivity, and optimize communication across institutions. Our products and services deliver measurable results — improving operational performance while reducing costs and complexity.</div>
+      </div>
+      <div class="row topmargin30">
+        <div class="col-lg-3 col-md-6 text-center rowmargin30"><img src="img/ramanana.png" /> <div class="collegename">Ramanand Arya D.A.V. College (Autonomous)</div></div>
+        <div class="col-lg-3 col-md-6 text-center rowmargin30"><img src="img/somaiya.png" /> <div class="collegename">S. K. Somaiya Somaiya
+Vidyavihar University</div></div>
+        <div class="col-lg-3 col-md-6 text-center rowmargin30"><img src="img/nkt.png" /> <div class="collegename">N.K.T. College
+(Autonomous)</div></div>
+        <div class="col-lg-3 col-md-6 text-center rowmargin30"><img src="img/kvpendharkar.png" /> <div class="collegename"> K.V. Pendharkar
+College (Automonus)</div></div>
+      </div>
+      <div class="topmargin20 rowmargin40"><a href="#" class="primarybtn btnsm">View all</a></div>
+  </div>
+  <div class="col-md-1">&nbsp;</div>
+  <div class="col-md-4 rowmargin30"><img src="img/laptopgirl2.png" class="img-fluid" /></div>
+</div>
+
+
+
+    <div class="testimainbox topmargin60">
+      <div class="mainheading text-center">
+        <h3 class="drkbluetxtcolor">Testimonials</h3>
+        <div class="bluetxtcolor">See How We’ve Made a Difference</div>
+      </div>
+      <div class="swiper-container1 topmargin30">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            
+          <div class="swiper-slide">
+              <div class="card-box">
+              <div class="top-row">
+              <div class="name-box"><span>Name here</span><br/>
+              Principal</div>
+              <div class="circle-img"></div>
+              </div>
+              <p class="desc">
+                <span class="institutename">Asmita College of Arts & Commerce for Women</span><br/>
+              Inficare Solutions Pvt Ltd has transformed the way we manage our student data for more than twenty one years. From admissions to results, everything is now seamless and efficient. The system’s accuracy, ease of use, and excellent after-sales support have made it an integral part of our institution’s success.” — Principal, Asmita College of Arts & Commerce for Women, Mumbai.
+              </p>
+              </div>              
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card-box">
+              <div class="top-row">
+              <div class="name-box"><span>Name here</span><br/>
+              Principal</div>
+              <div class="circle-img"></div>
+              </div>
+              <p class="desc">
+                <span class="institutename">K. M. Agrawal College of Arts, Commerce and Science, Kalyan</span><br/>
+              Since more than fourteen years, Inficare’s Whiiz ERP has been a game-changer for our college. The integration of admission, fees, and result modules ensures smooth operations throughout the academic cycle. Their consistent updates and reliable support team reflect true professionalism.”
+              </p>
+              </div>              
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card-box">
+              <div class="top-row">
+              <div class="name-box"><span>Name here</span><br/>
+              Principal</div>
+              <div class="circle-img"></div>
+              </div>
+              <p class="desc">
+                <span class="institutename">Laxman Devram Sonawane College of Arts & Commerce, Kalyan</span><br/>
+              Since our college inception, we have relied on Inficare Solutions Pvt Ltd Whiiz ERP, and for over twenty years, it has streamlined our student management process. Its admission, fees, and result modules work seamlessly, delivering unmatched accuracy and efficiency.
+              </p>
+              </div>              
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card-box">
+              <div class="top-row">
+              <div class="name-box"><span>Name here</span><br/>
+              Principal</div>
+              <div class="circle-img"></div>
+              </div>
+              <p class="desc">
+                <span class="institutename">Bharat College of Arts & Commerce, Badlapur</span><br/>
+             For over eleven years, Inficare’s Whiiz ERP has been integral to our academic operations — streamlining everything from student admissions to result processing. It has consistently delivered transparency, efficiency, and dependable support throughout our journey.
+              </p>
+              </div>              
+            </div>
+
+
+            <div class="swiper-slide">
+              <div class="card-box">
+              <div class="top-row">
+              <div class="name-box"><span>Name here</span><br/>
+              Principal</div>
+              <div class="circle-img"></div>
+              </div>
+              <p class="desc">
+                <span class="institutename">Gurukul College of Commerce, Mumbai</span><br/>
+             From online admissions to fee tracking and result publishing, everything has been running smoothly with Inficare Solution Pvt Ltd Whiiz ERP for more than twenty-three years. The system is intuitive, stable, and perfectly suited for our institutional needs.
+              </p>
+              </div>              
+            </div>
+
+             <div class="swiper-slide">
+              <div class="card-box">
+              <div class="top-row">
+              <div class="name-box"><span>Name here</span><br/>
+              Principal</div>
+              <div class="circle-img"></div>
+              </div>
+              <p class="desc">
+                <span class="institutename">Patuck-Gala College of Commerce, Mumbai</span><br/>
+            Since 2024, we have been using Inficare’s Result Processing ERP and it has proven to be exceptionally reliable and accurate. The system has completely eliminated manual errors and ensured timely result publication.
+              </p>
+              </div>              
+            </div>
+
+            
+
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="topmargin30 text-center"><a href="#" class="primarybtn btnsm">View all Testimonials</a></div>
+    </div>
+
+  </div>
+</div>
+
+
+<footer>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div><a href="default.html"><img src="img/Inficare_white_logo.png" alt="Inficare" /></a></div>
+      <div class="topmargin30">We works confidently to achieve its
+saying Look Beyond The Possible.
+Its history is like that of a tree which
+is watered & nourised caressly to
+enable it to stand erect on its own
+roots.</div>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Get in Touch</h6>
+      <table>
+        <tr>
+        <td valign="top" width="20"><i class="fa fa-map-marker"></i></td>
+        <td>102, 1st Floor, Shreeji Ashish,<br/>  Nr. Jagdish Book Depot,<br/> Thane - 400601,<br/> Maharashtra, India.</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-envelope"></i></td>
+        <td><a href="mailto:contact@inficare.in">contact@inficare.in</a></td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-phone"></i></td>
+        <td><a href="tel:+91 8007860622">+91 8007860622</a></td>
+      </tr>
+    </table>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Products</h6>
+      <ul>
+        <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-10 rowmargin30">
+      <h6>Company</h6>
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+<li><a href="whyinficare.html">Why Inficare?</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="clientele.html">Our Clientele</a></li>
+<li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-1 col-2 rowmargin30">
+      <div><a href="https://www.linkedin.com/company/inficare-solutions-pvt-ltd" target="_blank"><img src="img/linkedin.png" /></a></div>
+    </div>
+  </div>
+  <hr>
+  © Copyright <script>document.write(new Date().getFullYear())</script>, Inficare Solutions Pvt. Ltd.
+</div>
+</footer>
+
+
+
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.min.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.js"></script>
+
+<!--Numbers Counting script start here--> 
+<script src="counter/waypoints.min.js"></script> 
+<script src="counter/jquery.counterup.min.js"></script> 
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+		
+		
+    });
+</script> 
+<!--Numbers Counting script end here-->
+
+<script src="vendor/plugins/js/plugins.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="js/theme.init.js"></script>
+
+
+
+</body>
+</html>
