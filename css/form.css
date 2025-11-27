@@ -1,0 +1,324 @@
+/****************************************************************************************************
+Radio Button and Checkbox css start here
+****************************************************************************************************/
+
+.form-control {
+    font-size: 13px;
+    color: #616161;
+    border: 1px solid #DFE6EA;
+    padding: 10px 10px;
+    border-radius: 6px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .form-control {
+        transition: none;
+    }
+}
+.form-control[type="file"] {
+    overflow: hidden;
+}
+.form-control[type="file"]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form-select {
+    padding: 10px 35px 10px 10px;
+    font-size: 13px;
+    color: #616161;
+    background-color: #fff;
+    border: 1px solid #DFE6EA;
+    border-radius: 6px;
+}
+@media (prefers-reduced-motion: reduce) {
+    .form-select {
+        transition: none;
+    }
+}
+.form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.input-group-addon {
+    padding: 6px 10px 6px 10px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #000;
+    text-align: center;
+    background-color: #fff;
+    border-top: 0px solid #cfcfcf;
+    border-right: 0px solid #cfcfcf;
+    border-bottom: 0px solid #cfcfcf;
+    border-left: 0px solid #cfcfcf;
+    border-radius: 0px;
+    min-height: 40px;
+}
+.checkboxfilter {
+    margin-bottom: 5px;
+} 
+
+
+
+
+
+
+
+/****************************************************************************************************
+Textfield & Button css start here
+****************************************************************************************************/
+.primarybtn {
+  color: #fff !important;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+  border: solid 0px #005AA0;
+  background: #005AA0;
+  border-radius:5px;
+  transition:0.4s;
+  text-decoration: none;
+}
+.primarybtn:hover, .primarybtn:focus, .primarybtn.focus {
+	text-decoration: none;
+	background:#3EADE5;
+	color: #ffffff;
+}
+.primarybtnol {
+  color: #000;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+  border: solid 1px #333436;
+  background: #fff;
+  border-radius:4px;
+  transition:0.4s;
+}
+.primarybtnol:hover, .primarybtnol:focus, .primarybtnol.focus {
+	text-decoration: none;
+	background:#333436;
+	color: #fff;
+}
+.secondrybtn {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+  border: solid 1px #185EEB;
+  background: #185EEB;
+  border-radius:5px;
+  transition:0.4s;
+}
+.secondrybtn:hover, .secondrybtn:focus, .secondrybtn.focus {
+	text-decoration: none;
+	background:#0f51d6;
+	color: #ffffff;
+}
+.secondrybtnol {
+  color: #185EEB;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+  border: solid 1px #185EEB;
+  background: #fff;
+  border-radius:4px;
+  transition:0.4s;
+}
+.secondrybtnol:hover, .secondrybtnol:focus, .secondrybtnol.focus {
+	text-decoration: none;
+	background:#185EEB;
+	color: #fff;
+}
+.removebtn {
+  color: #333436;
+  font-weight: 500;
+  text-align: center;
+  line-height: normal;
+  border: solid 1px #333436;
+  background: #E5E5E5;
+  border-radius:5px;
+  transition:0.4s;
+}
+.removebtn:hover, .removebtn:focus, .removebtn.focus {
+	text-decoration: none;
+	background:#c4c4c4;
+}
+.btnsm {
+	font-size: 13px;
+	padding: 8px 12px;
+}
+.btnmd {
+	font-size: 14px;
+	padding: 10px 15px;
+}
+.btnlg {
+	font-size: 15px;
+	padding: 12px 20px;
+}
+.btnsmfullwidth {
+	width: 100%;
+    font-size: 13px;
+    padding: 8px 10px;
+}
+.btnmdfullwidth {
+	width: 100%;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+.btnlgfullwidth {
+	width: 100%;
+    font-size: 15px;
+    padding: 12px 10px;
+}
+.voucherbtn {
+    font-size: 13px;
+    color: #185EEB;
+    font-weight: 500;
+    text-align: center;
+    line-height: normal;
+    border: solid 1px #185EEB;
+    background: #fff;
+    border-radius:4px;
+    transition:0.4s;
+    padding: 7px 10px;
+    margin-bottom: 2px;
+}
+.voucherbtn:hover, .voucherbtn:focus, .voucherbtn.focus {
+    text-decoration: none;
+    background: #F5F5F5;
+    color: #185EEB;
+}
+.voucherbtn img {
+  height: 20px;
+}
+.modifybtn {
+    font-size: 13px;
+    color: #185EEB;
+    font-weight: 500;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #DDF1FF;
+    background: #DDF1FF;
+    border-radius: 30px;
+    transition:0.4s;
+    padding: 7px 15px;
+}
+.modifybtn:hover, .modifybtn:focus, .modifybtn.focus {
+    text-decoration: none;
+    background: #d3ecfd;
+}
+.likebtn {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #333436;
+    background: #333436;
+    border-radius: 6px;
+    transition:0.4s;
+    padding: 7px 10px;
+}
+.likebtn:hover, .likebtn:focus, .likebtn.focus {
+    text-decoration: none;
+    background: #000;
+}
+.swapbtn {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #333436;
+    background: #333436;
+    border-radius: 6px;
+    transition:0.4s;
+    padding: 7px 10px;
+}
+.swapbtn:hover, .swapbtn:focus, .swapbtn.focus {
+    text-decoration: none;
+    background: #000;
+}
+.swapbtn img {
+    height: 18px;
+    vertical-align: top;
+}
+.refreshbtn {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #333436;
+    background: #333436;
+    border-radius: 6px;
+    transition:0.4s;
+    padding: 7px 10px;
+}
+.refreshbtn:hover, .refreshbtn:focus, .refreshbtn.focus {
+    text-decoration: none;
+    background: #000;
+}
+.myleadsplusbtn {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #333436;
+    background: #333436;
+    border-radius: 6px;
+    transition:0.4s;
+    padding: 7px 10px;
+}
+.myleadsplusbtn:hover, .myleadsplusbtn:focus, .myleadsplusbtn.focus {
+    text-decoration: none;
+    background: #000;
+}
+.grayiconbtn {
+    font-size: 14px;
+    color: #333436;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #EFEFEF;
+    background: #EFEFEF;
+    border-radius: 100%;
+    width: 28px;
+    height: 28px;
+    transition:0.4s;
+    padding: 0px 0px;
+}
+.grayiconbtn:hover, .grayiconbtn:focus, .grayiconbtn.focus {
+    text-decoration: none;
+    background: #cccbcb;    
+}
+.actionbtn {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    border: solid 0px #333436;
+    background: #333436;
+    border-radius: 6px;
+    transition:0.4s;
+    padding: 4px 8px 6px 8px;
+}
+.actionbtn:hover, .actionbtn:focus, .actionbtn.focus {
+    text-decoration: none;
+    background: #000;
+}
+.actionbtn img {
+    height: 16px;
+    vertical-align: middle;
+}
+
+
+@media screen and (max-width : 480px) {
+
+.fw_mob {
+    width: 120px;
+}
+
+
+}
