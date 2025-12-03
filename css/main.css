@@ -466,8 +466,9 @@ Other Css start here
   margin-bottom: 20px;
 }
 .productname img {
-  width: 54px;      /* set a fixed width */
-  height: auto;     /* maintain aspect ratio */
+  /*width: 54px;*/      /* set a fixed width */
+  width: auto;
+  height: 53px;     /* maintain aspect ratio */
   flex-shrink: 0;   /* prevent flexbox from squeezing/stretched image */
   object-fit: contain;
   margin-right: 10px;
@@ -478,13 +479,16 @@ Other Css start here
   margin-bottom: 20px;
 }
 .productname2 img {
-  width: 54px;      /* set a fixed width */
-  height: auto;     /* maintain aspect ratio */
+  /*width: 54px;*/      /* set a fixed width */
+  width: auto;
+  height: 53px;     /* maintain aspect ratio */
   flex-shrink: 0;   /* prevent flexbox from squeezing/stretched image */
   object-fit: contain;
   margin-right: 10px;
 }
-
+.productname h4 span{
+  font-size: 18px;
+}
 .prod_one_bg {
   background-color: #D9F4F1;
   border-radius: 30px 30px 0px 0px;
@@ -848,10 +852,13 @@ width: 100%;
     display: flex;
     flex-direction: column;
 }
+.testimonial-card a{
+    text-decoration: none;
+}
 
 .t-header {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: flex-start !important;
     margin-bottom: 15px;
 }
 
@@ -863,6 +870,7 @@ width: 100%;
     margin-right: 15px;
     border: 3px solid #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+     flex-shrink: 0 !important;
 }
 
 .t-info h3 {
@@ -1054,7 +1062,50 @@ width: 100%;
     border-radius: 30px;
 }
 .prodscr1{
-    background-color: rgb(225, 255, 245);
+    background: url(../img/admissionbg.png) no-repeat top center #E9FFFD;
+    background-size: cover;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.prodscr2{
+    background: url(../img/sdmbg.png) no-repeat top center #e9eff7;
+    background-size: cover;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.prodscr3{
+    background: url(../img/fmbg.png) no-repeat top center #e7e3f9;
+    background-size: cover;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.prodscr4{
+    background: url(../img/emsbg.png) no-repeat bottom center #ffece9;
+    background-size: cover;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.prodscr5{
+    background: url(../img/whiizmobbg.png) no-repeat bottom center #ffece9;
+    background-size: cover;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.prodscr6{
+    background: url(../img/dmsbg.png) no-repeat bottom center #ffece9;
+    background-size: cover;
+    border-radius: 40px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.prodscr7{
+    background: url(../img/obebg.png) no-repeat bottom center #fdf9ce;
+    background-size: cover;
     border-radius: 40px;
     margin-bottom: 30px;
     position: relative;
@@ -1090,20 +1141,41 @@ width: 100%;
     margin: 0px;
 }
 .keyfeaturebox li{
-    padding: 0px 0px 15px 40px;
+    padding: 0px 0px 15px 30px;
     margin: 0px;
     list-style: none;
-    background: url(../img/bullet.png) no-repeat top left;
-    font-size: 15px;
+    background: url(../img/bullet.png) no-repeat top 2px left;
+    font-size: 14px;
+}
+.keyfeaturebox ul li ul{
+    padding-left: 20px;
+}
+.keyfeaturebox ul li ul li{
+    background: none;
+    list-style: disc;
+    padding-left: 0px;
+    padding-bottom: 3px;
 }
 .keyfeaturebox li h4{
-    font-weight: 700;
+    font-weight: 400;
     padding: 0px 0px 10px 0px;
     margin: 0px;
-    font-size: 17px;
-    color: #1b6acc;
+    font-size: 20px;
+    color: #3EADE5;
 }
-
+.contact{
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 9999;
+}
+.continfo a{
+  color: #00A0E3;
+  text-decoration: none;
+}
+.footercounter{
+  background-color: #f7f7f7;
+}
 
 /****************************************************************************************************
 Media Query css start here
@@ -1249,10 +1321,14 @@ Media Query css start here
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 20px 0px;
 }
 .mangmboxcont{
     padding: 40px;
+}
+.procont{
+    font-size: 15px;
+    line-height: 20px;
 }
 }
 
@@ -1403,6 +1479,12 @@ Media Query css start here
     padding: 30px;
     margin: 60px 0px 30px 0px;
 }
-
+.procont{
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    padding: 30px;
+}
 
 }
