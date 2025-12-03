@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="css/collage.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="swipperslider/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="fonts/fontawesome/css/all.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-latest.min.js"></script> 		
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <title>Inficare</title>
+  
+<!-- Modal js start here-->
+<script>
+  var myModal = document.getElementById('myModal')
+  var myInput = document.getElementById('myInput')
+
+  myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script>
+<!-- Modal js end here-->
+ <script>
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header.topband");
+    if (window.scrollY > 20) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
+</script>
+</head>
+<body>
+<!-- Demo Request Form Modal start -->
+<div class="modal fade" id="DemoRequest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md cartmodalmar">
+    <div class="modal-content cartmodalcont">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Request a Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <form id="demoRequestForm">
+    
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Designation</label>
+      <input type="text" class="form-control" name="designation" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Institute / Company Name</label>
+      <input type="text" class="form-control" name="company" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email ID</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Contact Number</label>
+      <input type="tel" class="form-control" name="contact" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" name="message" rows="3"></textarea>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn primarybtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+    </div>
+  </div>
+</div>
+<!-- Demo Request Form Modal end -->
+
+
+<!-- header start -->
+<header class="topband">
+    <div class="header">
+    <div class="logomenuarea">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-4">
+          <div class="logo">
+  <a href="index.html">
+    <img src="img/Inficare_white_logo.png" class="logo-white" alt="logo">
+    <img src="img/Inficare_color_logo.png" class="logo-color" alt="logo">
+  </a>
+</div>
+        </div>
+        <div class="col-lg-10 col-8">
+        <div class="menucontainer">
+        <!-- menu start here -->
+        <div class="menuarea">
+          <div class="menu-overlay"></div>
+            <nav class="menu">
+              <div class="mobile-menu-head">
+                <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="menu-main">
+                <li class="menu-item-has-children"><a href="index.html">Home </a></li>
+                <li class="menu-item-has-children"><a href="aboutus.html">About us </a></li>
+                <li class="menu-item-has-children"><a href="whyinficare.html">Why Inficare? </a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Products <i class="fa fa-angle-down"></i></a>
+                  <div class="sub-menu single-column-menu">
+                    <ul>
+                      <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management System (EMS)</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children"><a href="testimonials.html">Testimonials </a></li>
+                <li class="menu-item-has-children"><a href="clientele.html">Our Clientele</a></li>
+                <li class="menu-item-has-children"><a href="contact.html">Contact </a></li>
+                <li class="menu-item-has-children requestdemobtn hidemob"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Request a Demo </a></li>
+              </ul>
+            </nav>				
+        </div>
+        <div class="mobdemobtn hidedesk"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Demo </a></div>
+        <div class="mobile-menu-trigger"><span></span></div>
+        <!-- menu end here -->
+       
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+</header>
+<!-- header end -->
+
+
+<div class="collageoverlay"></div>
+  <div class="innercollage">
+    <h2>Our Products</h2>
+    <img src="img/products.jpg" />
+  </div>
+
+    <div class="pagenavigate2">
+    <div class="container">
+      <a href="#">Home</a> Products / Fees Management (FM)
+    </div>
+    </div>
+
+
+    <div class="white_area">
+        <div class="container">
+           <div class="productname">
+              <img src="img/WhiizFMColour.png" alt=""> <h4>Fees Management (FM) 
+            </h4>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-8 col-md-10"><div class="paragrph text-center">
+              The <strong>Fees Management System</strong> simplifies and automates the complete process of fee collection, receipt generation, and financial reporting for educational institutions. It ensures transparency, flexibility, and convenience for both students and administrative staff.
+              </div></div>
+            </div>
+
+
+            <div class="row justify-content-center topmargin40">
+              <div class="col-lg-10 col-md-10">
+                <div class="prodscr3">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="proscrpadd"><img src="img/dummy.png" alt="" class="img-fluid"></div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="procont">
+                                <div class="">
+                                    Explore our <span>Fees Management</span><br>
+system in real time.
+                               
+                               <div class="topmargin20"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest" class="primarybtn btnsm">Request a Demo</a></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mainheading text-center">
+        <h3 class="drkbluetxtcolor">Key Features</h3>
+      </div>
+            <div class="keyfeaturebox">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <ul>
+                    <li>
+                        <h4>Multiple Payment Options</h4>
+                         Students can conveniently pay their fees through <strong>online transactions, cash, demand draft (DD)</strong> and offline QR code as per their preference.
+                    </li>
+                    <li>
+                        <h4>Online Payment Integration</h4>
+                        Integrated with secure <strong>payment gateways (Easebuzz and NTT Data – Atom)</strong>, enabling <strong>online fee payment via web portal or mobile app</strong>, ensuring seamless digital transactions.
+                    </li>
+                    <li>
+                        <h4>Auto Receipt Generation</h4>
+                        Upon successful online payment, the system automatically generates and issues <strong>digital fee receipts</strong>, minimizing manual intervention and errors.
+                    </li>
+                      <li>
+                        <h4>Flexible Payment Structure</h4>
+                         Institutions can allow students to pay fees in <strong>multiple installments or part payments</strong>, providing flexibility in financial planning.
+                    </li>
+                    <li>
+                        <h4>Counter Collection Management</h4>
+                        Fees collected through <strong>cash, DD and offline QR code</strong> at the college counter can be easily recorded in the system, maintaining real-time synchronization of financial data.
+                    </li>
+                    <li>
+                        <h4>Head-wise Fees Register</h4>
+                       Maintains a <strong>comprehensive register of fees collected under various heads</strong> (e.g., tuition, hostel, exam, transport), ensuring clear categorization and transparency.
+                </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <ul>
+                    <li>
+                        <h4>User-wise Collection Report</h4>
+                        Generates detailed <strong>fee collection reports user-wise (operator/staff-wise)</strong> to monitor and audit collection efficiency.
+                    </li>
+                    <li>
+                        <h4>Outstanding Fees Register</h4>
+                         Tracks <strong>pending or unpaid fees student-wise and head-wise</strong>, helping the institute follow up on dues effectively.
+                    </li>
+                    <li>
+                        <h4>Admission Cancellation & Refund Register</h4>
+                        Automatically updates records for <strong>students with cancelled admissions</strong>, manages <strong>refund processing</strong>, and maintains a transparent refund register.
+                    </li>
+                    <li>
+                        <h4>Concession Register</h4>
+                        Manages <strong>fee concessions, scholarships, or discounts</strong> granted to students and reflects them in relevant reports and receipts.
+                    </li>
+                    <li>
+                        <h4>Fees Reconciliation</h4>
+                        Facilitates <strong>daily, weekly, or monthly reconciliation</strong> of collections (online and offline), outstanding and refund, ensuring financial accuracy.
+                    </li>
+                </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="topmargin20 text-center"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest" class="primarybtn btnsm">Request a Demo</a></div>
+            
+        </div>
+    </div>
+
+
+
+<div class="footercounter">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-12">
+         <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">85</span>+</h3>
+                      Colleges </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">3</span>.1 Million+</h3>
+                      Student Process </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">25</span></h3>
+                      Years of Experience </div>
+                  </div>
+        </div>
+      </div>
+  </div>
+</div>
+<footer>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div><a href="index.html"><img src="img/Inficare_white_logo.png" alt="Inficare" /></a></div>
+      <div class="topmargin30">We works confidently to achieve its
+saying Look Beyond The Possible.
+Its history is like that of a tree which
+is watered & nourised caressly to
+enable it to stand erect on its own
+roots.</div>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Get in Touch</h6>
+      <table>
+        <tr>
+        <td valign="top" width="20"><i class="fa fa-map-marker"></i></td>
+        <td>601, Abhijeet CHS, Nr. Platform No. 1,<br>
+Dada Patil Wadi, Naupada,<br>
+Thane - 400602,<br>
+Maharashtra, India.</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-envelope"></i></td>
+        <td><a href="mailto:contact@inficare.in">contact@inficare.in</a></td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-phone"></i></td>
+        <td><a href="tel:+91 8007860622">+91 8007860622</a></td>
+      </tr>
+    </table>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Products</h6>
+      <ul>
+        <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management System (EMS)</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-10 rowmargin30">
+      <h6>Company</h6>
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+<li><a href="whyinficare.html">Why Inficare?</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="clientele.html">Our Clientele</a></li>
+<li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-1 col-2 rowmargin30">
+      <div><a href="https://www.linkedin.com/company/inficare-solutions-pvt-ltd" target="_blank"><img src="img/linkedin.png" /></a></div>
+    </div>
+  </div>
+  <hr>
+  © Copyright <script>document.write(new Date().getFullYear())</script>, Inficare Solutions Pvt. Ltd.
+</div>
+</footer>
+
+
+
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.min.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.js"></script>
+
+<!--Numbers Counting script start here--> 
+<script src="counter/waypoints.min.js"></script> 
+<script src="counter/jquery.counterup.min.js"></script> 
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+		
+		
+    });
+</script> 
+<!--Numbers Counting script end here-->
+
+<script src="vendor/plugins/js/plugins.min.js"></script>
+<script src="js/theme.js"></script>
+<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="js/theme.init.js"></script>
+
+
+
+</body>
+</html>

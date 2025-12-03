@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="css/collage.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="swipperslider/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="fonts/fontawesome/css/all.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-latest.min.js"></script> 		
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <title>Inficare</title>
+  
+<!-- Modal js start here-->
+<script>
+  var myModal = document.getElementById('myModal')
+  var myInput = document.getElementById('myInput')
+
+  myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script>
+<!-- Modal js end here-->
+ <script>
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header.topband");
+    if (window.scrollY > 20) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
+</script>
+</head>
+<body>
+<!-- Demo Request Form Modal start -->
+<div class="modal fade" id="DemoRequest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md cartmodalmar">
+    <div class="modal-content cartmodalcont">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Request a Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <form id="demoRequestForm">
+    
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Designation</label>
+      <input type="text" class="form-control" name="designation" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Institute / Company Name</label>
+      <input type="text" class="form-control" name="company" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email ID</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Contact Number</label>
+      <input type="tel" class="form-control" name="contact" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" name="message" rows="3"></textarea>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn primarybtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+    </div>
+  </div>
+</div>
+<!-- Demo Request Form Modal end -->
+
+
+<!-- header start -->
+<header class="topband">
+    <div class="header">
+    <div class="logomenuarea">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-4">
+          <div class="logo">
+  <a href="index.html">
+    <img src="img/Inficare_white_logo.png" class="logo-white" alt="logo">
+    <img src="img/Inficare_color_logo.png" class="logo-color" alt="logo">
+  </a>
+</div>
+        </div>
+        <div class="col-lg-10 col-8">
+        <div class="menucontainer">
+        <!-- menu start here -->
+        <div class="menuarea">
+          <div class="menu-overlay"></div>
+            <nav class="menu">
+              <div class="mobile-menu-head">
+                <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="menu-main">
+                <li class="menu-item-has-children"><a href="index.html">Home </a></li>
+                <li class="menu-item-has-children"><a href="aboutus.html">About us </a></li>
+                <li class="menu-item-has-children"><a href="whyinficare.html">Why Inficare? </a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Products <i class="fa fa-angle-down"></i></a>
+                  <div class="sub-menu single-column-menu">
+                    <ul>
+                      <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management System (EMS)</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children"><a href="testimonials.html">Testimonials </a></li>
+                <li class="menu-item-has-children"><a href="clientele.html">Our Clientele</a></li>
+                <li class="menu-item-has-children"><a href="contact.html">Contact </a></li>
+                <li class="menu-item-has-children requestdemobtn hidemob"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Request a Demo </a></li>
+              </ul>
+            </nav>				
+        </div>
+        <div class="mobdemobtn hidedesk"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Demo </a></div>
+        <div class="mobile-menu-trigger"><span></span></div>
+        <!-- menu end here -->
+       
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+</header>
+<!-- header end -->
+
+
+<div class="collageoverlay"></div>
+  <div class="innercollage">
+    <h2>Contact us</h2>
+    <img src="img/testimonials.jpg" />
+  </div>
+
+    <div class="pagenavigate2">
+    <div class="container">
+      <a href="#">Home</a> / Contact us
+    </div>
+    </div>
+
+
+    <div class="white_area">
+        <div class="container">
+<div class="row">
+	<div class="col-md-6 col-sm-7">
+	<div class="pagecont">
+	<h3>Get in Touch</h3>	
+	Whether you’re exploring our institutional and enterprise management software or looking for a long-term technology partner, we’re here to help.
+Reach out to Inficare Solutions today and discover how our smart solutions can streamline operations, boost productivity, and simplify management across your institution.
+
+<h4>Contact Information</h4>
+		<div class="continfo">
+		<strong>Address:</strong><br>
+601, Abhijeet CHS, Nr. Platform No. 1,<br>
+Dada Patil Wadi, Naupada,<br>
+Thane - 400602,<br>
+Maharashtra, India.<br>
+<br>
+<br>
+		<i class="fa fa-phone"></i> Mobile: <a href="tel:+918007860622">+91 8007860622</a>, <a href="tel:+912247516486">+91 22 47516486</a></a><br>
+		<i class="fa fa-envelope"></i> Email: <a href="mailto:contact@inficare.in">contact@inficare.in</a>
+		</div>
+	</div>	
+	</div>
+		<div class="col-md-2 col-sm-1">&nbsp;</div>
+		<div class="col-md-4 col-sm-4 rowmargin30">
+		<div class="contactbox">
+			<h4>Send an Enquiry</h4>
+			
+			<div class="form-group mb-3">
+			<input type="text" class="form-control" placeholder="Name">
+			</div>
+			<div class="form-group mb-3">
+			<input type="text" class="form-control" placeholder="Institute / Company Name">
+			</div>
+			<div class="form-group mb-3">
+			<input type="email" class="form-control" placeholder="Email Id">
+			</div>
+			<div class="form-group mb-3">
+			<input type="number" class="form-control" placeholder="Phone">
+			</div>
+			<div class="form-group mb-3">
+			<textarea class="form-control" placeholder="Message" rows="3"></textarea>
+			</div>
+			<div class="form-group">
+			<button class="primarybtn btn-sm">Enquire Now</button>
+			</div>
+			
+			
+			
+		</div>
+		</div>
+	</div>
+  
+
+
+</div>
+    </div>
+
+
+
+<div class="footercounter">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-12">
+         <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">85</span>+</h3>
+                      Colleges </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">3</span>.1 Million+</h3>
+                      Student Process </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">25</span></h3>
+                      Years of Experience </div>
+                  </div>
+        </div>
+      </div>
+  </div>
+</div>
+<footer>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div><a href="index.html"><img src="img/Inficare_white_logo.png" alt="Inficare" /></a></div>
+      <div class="topmargin30">We works confidently to achieve its
+saying Look Beyond The Possible.
+Its history is like that of a tree which
+is watered & nourised caressly to
+enable it to stand erect on its own
+roots.</div>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Get in Touch</h6>
+      <table>
+        <tr>
+        <td valign="top" width="20"><i class="fa fa-map-marker"></i></td>
+        <td>601, Abhijeet CHS, Nr. Platform No. 1,<br>
+Dada Patil Wadi, Naupada,<br>
+Thane - 400602,<br>
+Maharashtra, India.</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-envelope"></i></td>
+        <td><a href="mailto:contact@inficare.in">contact@inficare.in</a></td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-phone"></i></td>
+        <td><a href="tel:+91 8007860622">+91 8007860622</a></td>
+      </tr>
+    </table>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Products</h6>
+      <ul>
+        <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management System (EMS)</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-10 rowmargin30">
+      <h6>Company</h6>
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+<li><a href="whyinficare.html">Why Inficare?</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="clientele.html">Our Clientele</a></li>
+<li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-1 col-2 rowmargin30">
+      <div><a href="https://www.linkedin.com/company/inficare-solutions-pvt-ltd" target="_blank"><img src="img/linkedin.png" /></a></div>
+    </div>
+  </div>
+  <hr>
+  © Copyright <script>document.write(new Date().getFullYear())</script>, Inficare Solutions Pvt. Ltd.
+</div>
+</footer>
+
+
+<!-- Testimonial Modal -->
+<div class="modal fade" id="TestimonialModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img id="tmImage" src="" class="img-fluid w-100" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.min.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.js"></script>
+
+<!--Numbers Counting script start here--> 
+<script src="counter/waypoints.min.js"></script> 
+<script src="counter/jquery.counterup.min.js"></script> 
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+		
+		
+    });
+</script> 
+<!--Numbers Counting script end here-->
+
+
+
+<script>
+document.getElementById('TestimonialModal')
+.addEventListener('show.bs.modal', function (event) {
+
+    const trigger = event.relatedTarget;     // The clicked <a>
+    const imgSrc = trigger.getAttribute('data-image'); // Fetch the image URL
+
+    document.getElementById('tmImage').src = imgSrc; // Replace modal image
+});
+</script>
+
+</body>
+</html>

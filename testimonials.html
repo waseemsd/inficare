@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link href="css/collage.css" rel="stylesheet" type="text/css">
+<link href="css/form.css" rel="stylesheet" type="text/css">
+<link href="swipperslider/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="fonts/fontawesome/css/all.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery-latest.min.js"></script> 		
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <title>Inficare</title>
+  
+<!-- Modal js start here-->
+<script>
+  var myModal = document.getElementById('myModal')
+  var myInput = document.getElementById('myInput')
+
+  myModal.addEventListener('shown.bs.modal', function () {
+  myInput.focus()
+})
+</script>
+<!-- Modal js end here-->
+ <script>
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header.topband");
+    if (window.scrollY > 20) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+});
+</script>
+</head>
+<body>
+<!-- Demo Request Form Modal start -->
+<div class="modal fade" id="DemoRequest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md cartmodalmar">
+    <div class="modal-content cartmodalcont">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Request a Demo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <form id="demoRequestForm">
+    
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Designation</label>
+      <input type="text" class="form-control" name="designation" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Institute / Company Name</label>
+      <input type="text" class="form-control" name="company" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email ID</label>
+      <input type="email" class="form-control" name="email" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Contact Number</label>
+      <input type="tel" class="form-control" name="contact" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" name="message" rows="3"></textarea>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn primarybtn">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+    </div>
+  </div>
+</div>
+<!-- Demo Request Form Modal end -->
+
+
+<!-- header start -->
+<header class="topband">
+    <div class="header">
+    <div class="logomenuarea">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-2 col-4">
+          <div class="logo">
+  <a href="index.html">
+    <img src="img/Inficare_white_logo.png" class="logo-white" alt="logo">
+    <img src="img/Inficare_color_logo.png" class="logo-color" alt="logo">
+  </a>
+</div>
+        </div>
+        <div class="col-lg-10 col-8">
+        <div class="menucontainer">
+        <!-- menu start here -->
+        <div class="menuarea">
+          <div class="menu-overlay"></div>
+            <nav class="menu">
+              <div class="mobile-menu-head">
+                <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="menu-main">
+                <li class="menu-item-has-children"><a href="index.html">Home </a></li>
+                <li class="menu-item-has-children"><a href="aboutus.html">About us </a></li>
+                <li class="menu-item-has-children"><a href="whyinficare.html">Why Inficare? </a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">Products <i class="fa fa-angle-down"></i></a>
+                  <div class="sub-menu single-column-menu">
+                    <ul>
+                      <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management System (EMS)</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu-item-has-children"><a href="testimonials.html">Testimonials </a></li>
+                <li class="menu-item-has-children"><a href="clientele.html">Our Clientele</a></li>
+                <li class="menu-item-has-children"><a href="contact.html">Contact </a></li>
+                <li class="menu-item-has-children requestdemobtn hidemob"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Request a Demo </a></li>
+              </ul>
+            </nav>				
+        </div>
+        <div class="mobdemobtn hidedesk"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Demo </a></div>
+        <div class="mobile-menu-trigger"><span></span></div>
+        <!-- menu end here -->
+       
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+</header>
+<!-- header end -->
+
+
+<div class="collageoverlay"></div>
+  <div class="innercollage">
+    <h2>Testimonials</h2>
+    <img src="img/testimonials.jpg" />
+  </div>
+
+    <div class="pagenavigate2">
+    <div class="container">
+      <a href="#">Home</a> / Testimonials
+    </div>
+    </div>
+
+
+    <div class="white_area">
+        <div class="container">
+     <div class="testimonials-grid">
+   
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/DAV.jpg"> 
+            <div class="t-header">
+            <img src="img/ramanand2.jpg" alt="Balachandra Shetty">
+            <div class="t-info">
+                <h3>Dr. G. Balachandra Shetty </h3>
+                <p>Principal</p>
+                <span>Ramanand Arya D.A.V College (Autonomous)</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                “We have been using Inficare’s software for student admissions, fee management, and result processing for over a decade. The system is reliable, user-friendly, and has significantly streamlined our administrative operations. The support team is always responsive and professional, making Inficare a trusted technology partner for our institution.”
+            </p>
+        </div>
+        </a>
+       </div>
+       
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/SomaiyaBasic.jpg"> 
+        <div class="t-header">
+            <img src="img/somaiya2.jpg" alt="User">
+            <div class="t-info">
+                <h3>Name</h3>
+                <p>Principal</p>
+                <span>Somaiya School of Basic and Applied Sciences - Somaiya Vidyavihar University</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                "Since 2020, our college has relied on Inficare Solutions Pvt. Ltd.’s result processing system, which has brought remarkable consistency, accuracy, and transparency. Even during peak periods, the system operates reliably, minimizing manual errors and allowing staff to focus on academics. Inficare’s responsive team ensures our specific needs are met, making the solution an integral part of our academic operations.""
+            </p>
+        </div>
+        </a>
+    </div>
+     <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/nkt.jpg"> 
+        <div class="t-header">
+            <img src="img/nkt2.jpg" alt="Dilip M. Patil">
+            <div class="t-info">
+                <h3>Dr. Dilip M. Patil</h3>
+                <p>Principal</p>
+                <span>Sheth N.K.T.T College of Commerce & J.T.T. College of Arts (Autonomous)</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                “We appreciate Inficare’s commitment to quality and continuous improvement. Their Whiiz ERP has made our operations more organized, reduced manual workload, and improved communication between departments for more than seventeen years. A dependable partner we can always count on.”
+            </p>
+        </div>
+        </a>
+    </div>
+    
+</div>
+<div class="testimonials-grid">
+    
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/OmVidyalankar.jpg"> 
+        <div class="t-header">
+            <img src="img/omvidya.jpg" alt="Manisha Preniel Nair">
+            <div class="t-info">
+                <h3>Dr. Manisha Preniel Nair</h3>
+                <p>Chairman</p>
+                <span>Om Vidyalankar Shikshan Sanstha</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                "For over twenty years, Asmita College of Arts & Commerce for Women and for over nine years Asmita College of Law have shared a rewarding association with Inficare Solutions Pvt. Ltd. Their Whiiz ERP has transformed our operations — making admissions, fee management, and result processing seamless and error-free. The system continues to perform with the same reliability and efficiency as it did on day one, allowing us to focus more on our students and academic excellence rather than administrative tasks."
+            </p>
+        </div>
+        </a>
+    </div>
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/SomiayaHuma.jpg"> 
+        <div class="t-header">
+            <img src="img/somaiya2.jpg" alt="User">
+            <div class="t-info">
+                <h3>Name</h3>
+                <p>Principal</p>
+                <span>Somaiya School of Humanities and Social Science - Somaiya Vidyavihar University</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+               "Since 2020, our college has relied on Inficare Solutions Pvt. Ltd.’s result processing system, which has transformed a once-challenging task into a smooth, accurate, and transparent process. Its reliability ensures flawless performance even during peak periods, eliminating manual errors and allowing staff to focus on academics. With exceptional support tailored to our needs, Inficare has become a trusted partner in efficient and dependable result processing." 
+            </p>
+        </div>
+        </a>
+    </div>
+    
+
+    
+</div>
+<div class="testimonials-grid">
+   
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/Nirmala.jpg"> 
+        <div class="t-header">
+            <img src="img/nirmala2.jpg" alt="Dr. Swiddle D’Cunha">
+            <div class="t-info">
+                <h3>Dr. Swiddle D’Cunha</h3>
+                <p>I/C Principal</p>
+                <span>Nirmala Memorial Foundation College of Commerce & Science (Autonomous)</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                “Our association with Inficare Solutions Pvt Ltd spans more than nine years, and their Result Processing ERP remains one of the most dependable systems we use. It simplifies complex result computations and delivers precise outputs every time.”
+            </p>
+        </div>
+        </a>
+    </div>
+    
+</div>
+  <div class="testimonials-grid">
+   
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/Shailendra.jpg"> 
+        <div class="t-header">
+            <img src="img/Shailendra2.jpg" alt="Dr. Swati Pitale">
+            <div class="t-info">
+                <h3>Dr. Swati Pitale</h3>
+                <p>Principal</p>
+                <span>Shailendra Education Society’s Arts, Science & Commerce College</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+               “We have been associated with Inficare Solutions Pvt Ltd for more than eight years, and their ERP has become an essential part of our administrative workflow. Their proactive support team and easy-to-use system make them stand out.”
+            </p>
+        </div>
+        </a>
+    </div>
+
+    <div class="testimonial-card">
+        <div class="t-header">
+            <img src="img/kvpendharkar2.jpg" alt="User">
+            <div class="t-info">
+                <h3>Name</h3>
+                <p>Principal</p>
+                <span>K V Pendharkar College of Arts, Science and Commerce (Autonomous)</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                no testimonial given
+            </p>
+        </div>
+    </div>
+     <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/AsmitaCollege.jpg"> 
+        <div class="t-header">
+            <img src="img/asmita.jpg" alt="Dr. CA. S. M. Ojha">
+            <div class="t-info">
+                <h3>Dr. CA. S. M. Ojha</h3>
+                <p>Principal</p>
+                <span>Asmita College of Arts & Commerce for Women</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+               “Inficare Solutions Pvt Ltd has transformed the way we manage our student data for more than twenty one years. From admissions to results, everything is now seamless and efficient. The system’s accuracy, ease of use, and excellent after-sales support have made it an integral part of our institution’s success.” 
+            </p>
+        </div>
+        </a>
+    </div>
+    
+</div>
+<div class="testimonials-grid">
+    
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/KMAgraw.jpg"> 
+        <div class="t-header">
+            <img src="img/KMAgrawal.jpg" alt="Dr. Anita Manna">
+            <div class="t-info">
+                <h3>Dr. Anita Manna</h3>
+                <p>Principal</p>
+                <span>K. M. Agrawal College of Arts, Commerce and Science</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+              "Since more than fourteen years, Inficare’s Whiiz ERP has been a game-changer for our college. The integration of admission, fees, and result modules ensures smooth operations throughout the academic cycle. Their consistent updates and reliable support team reflect true professionalism.”
+            </p>
+        </div>
+        </a>
+    </div>
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/Vartak.jpg"> 
+        <div class="t-header">
+            <img src="img/annasaheb.jpg" alt="Dr. Arvind Ubale">
+            <div class="t-info">
+                <h3>Dr. Arvind Ubale</h3>
+                <p>Principal</p>
+                <span>Annasaheb Vartak College of Arts, Kedarnath Malhotra College of Commerce, E. S. Andrades College of Science</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                “We have been using Inficare Solutions Pvt Ltd result ERP for more than thirteen years. Its efficiency, accuracy, and easy interface have made result management a smooth and error-free process. Their consistent updates and responsive support are commendable.”
+            </p>
+        </div>
+        </a>
+    </div>
+    
+
+    
+</div>
+<div class="testimonials-grid">
+   
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/Bharat.jpg"> 
+        <div class="t-header">
+            <img src="img/BharatCollege.jpg" alt="Dr. Neetu Kapoor">
+            <div class="t-info">
+                <h3>Dr. Neetu Kapoor</h3>
+                <p>I/C Principal</p>
+                <span>Bharat College of Arts & Commerce</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                “For over eleven years, Inficare’s Whiiz ERP has been integral to our academic operations — streamlining everything from student admissions to result processing. It has consistently delivered transparency, efficiency, and dependable support throughout our journey.”
+            </p>
+        </div>
+        </a>
+    </div>
+    
+</div>
+  <div class="testimonials-grid">
+   
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/GurukulCollege.jpg"> 
+        <div class="t-header">
+            <img src="img/gurukul.jpg" alt="Dr. Mamta Rane">
+            <div class="t-info">
+                <h3>Dr. Mamta Rane</h3>
+                <p>Principal</p>
+                <span>Gurukul College of Commerce</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                “From online admissions to fee tracking and result publishing, everything has been running smoothly with Inficare Solution Pvt Ltd Whiiz ERP for more than twenty-three years. The system is intuitive, stable, and perfectly suited for our institutional needs.”
+            </p>
+        </div>
+        </a>
+    </div>
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/AsmitaLaw.jpg"> 
+        <div class="t-header">
+            <img src="img/asmita.jpg" alt="Dr. H. S. Gorge">
+            <div class="t-info">
+                <h3>Dr. H. S. Gorge</h3>
+                <p>Principal</p>
+                <span>Asmita College of Law</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+               “We have been associated with Inficare Solutions for more than nine years, and their ERP continues to deliver exceptional performance. The automation of our admission, fees, and result processes has saved time, reduced errors, and enhanced transparency across departments.” 
+            </p>
+        </div>
+        </a>
+    </div>
+     <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/Sonnavne.jpg"> 
+        <div class="t-header">
+            <img src="img/laxman.jpg" alt="Prof. Annie Antony">
+            <div class="t-info">
+                <h3>Prof. Annie Antony</h3>
+                <p>Principal</p>
+                <span>Laxman Devram Sonawane College of Arts & Commerce</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+               “Since our college inception, we have relied on Inficare Solutions Pvt Ltd Whiiz ERP, and for over twenty years, it has streamlined our student management process. Its admission, fees, and result modules work seamlessly, delivering unmatched accuracy and efficiency.”
+            </p>
+        </div>
+        </a>
+    </div>
+    
+</div>
+<div class="testimonials-grid">
+    
+
+    <div class="testimonial-card">
+        <a href="#" data-bs-toggle="modal" data-bs-target="#TestimonialModal" data-image="img/KBPThane.jpg"> 
+        <div class="t-header">
+            <img src="img/Karmaveer.jpg" alt="Santosh S. Gawade">
+            <div class="t-info">
+                <h3>Santosh S. Gawade</h3>
+                <p>Principal</p>
+                <span>Karmaveer Bhaurao Patil College of Arts & Commerce</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+                “Inficare Solutions Pvt Ltd provides not just ERP, but a complete service experience. Their Whiiz ERP for admissions, fees, and results is robust and flexible, perfectly adapting to our growing needs over the years since 2021”
+            </p>
+        </div>
+        </a>
+    </div>
+
+    <div class="testimonial-card">
+        <div class="t-header">
+            <img src="img/surendrakhandekar.jpg" alt="Dr. Surendra S. Khandekar">
+            <div class="t-info">
+                <h3>Dr. Surendra S. Khandekar</h3>
+                <p>Principal</p>
+                <span>Dr Shantilal Dhanji Devsey Arts, Commerce and Science College</span>
+            </div>
+        </div>
+        <div class="t-content">
+            <p>
+               “Since more than nineteen years, the transition to Inficare Solutions Pvt Ltd platform seamless, and since then, we’ve seen a remarkable improvement in efficiency and accuracy. The ERP has saved us countless hours of manual work.”
+            </p>
+        </div>
+    </div>
+    
+
+    
+</div>
+
+
+
+</div>
+    </div>
+
+
+<div class="footercounter">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-12">
+         <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">85</span>+</h3>
+                      Colleges </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">3</span>.1 Million+</h3>
+                      Student Process </div>
+                  </div>
+        </div>
+        <div class="col-md-3 col-12">
+          <div class="statsboxcontarea">
+                    <div class="statsboxcont">
+                      <h3><span class="counter">25</span></h3>
+                      Years of Experience </div>
+                  </div>
+        </div>
+      </div>
+  </div>
+</div>
+<footer>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div><a href="index.html"><img src="img/Inficare_white_logo.png" alt="Inficare" /></a></div>
+      <div class="topmargin30">We works confidently to achieve its
+saying Look Beyond The Possible.
+Its history is like that of a tree which
+is watered & nourised caressly to
+enable it to stand erect on its own
+roots.</div>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Get in Touch</h6>
+      <table>
+        <tr>
+        <td valign="top" width="20"><i class="fa fa-map-marker"></i></td>
+        <td>601, Abhijeet CHS, Nr. Platform No. 1,<br>
+Dada Patil Wadi, Naupada,<br>
+Thane - 400602,<br>
+Maharashtra, India.</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-envelope"></i></td>
+        <td><a href="mailto:contact@inficare.in">contact@inficare.in</a></td>
+      </tr>
+      <tr>
+        <td valign="top" width="20">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="top" width="20"><i class="fa fa-phone"></i></td>
+        <td><a href="tel:+91 8007860622">+91 8007860622</a></td>
+      </tr>
+    </table>
+    </div>
+    <div class="col-md-3 rowmargin30">
+      <h6>Products</h6>
+      <ul>
+        <li><a href="admission_process.html">Admission Process</a></li>
+                      <li><a href="student_data_management.html">Student Data Management (SDM)</a></li>
+                      <li><a href="fees_management.html">Fees Management (FM)</a></li>
+                      <li><a href="examination_management.html">Examination Management System (EMS)</a></li>
+                      <li><a href="whiiz_student_mobile_app.html">WHIIZ Student Mobile App</a></li>
+                      <li><a href="document_management_system.html">Document Management System (DMS)</a></li>
+                      <li><a href="outcome_based_education.html">Outcome Based Education (OBE)</a></li>
+                      <li><a href="result_process_outsource_service.html">Result Process Outsource Service</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-10 rowmargin30">
+      <h6>Company</h6>
+      <ul>
+        <li><a href="aboutus.html">About us</a></li>
+<li><a href="whyinficare.html">Why Inficare?</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="clientele.html">Our Clientele</a></li>
+<li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-1 col-2 rowmargin30">
+      <div><a href="https://www.linkedin.com/company/inficare-solutions-pvt-ltd" target="_blank"><img src="img/linkedin.png" /></a></div>
+    </div>
+  </div>
+  <hr>
+  © Copyright <script>document.write(new Date().getFullYear())</script>, Inficare Solutions Pvt. Ltd.
+</div>
+</footer>
+
+
+<!-- Testimonial Modal -->
+<div class="modal fade" id="TestimonialModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img id="tmImage" src="" class="img-fluid w-100" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.min.js"></script>
+<script type="text/javascript" src="swipperslider/swiper.js"></script>
+
+<!--Numbers Counting script start here--> 
+<script src="counter/waypoints.min.js"></script> 
+<script src="counter/jquery.counterup.min.js"></script> 
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+		
+		
+    });
+</script> 
+<!--Numbers Counting script end here-->
+
+
+
+<script>
+document.getElementById('TestimonialModal')
+.addEventListener('show.bs.modal', function (event) {
+
+    const trigger = event.relatedTarget;     // The clicked <a>
+    const imgSrc = trigger.getAttribute('data-image'); // Fetch the image URL
+
+    document.getElementById('tmImage').src = imgSrc; // Replace modal image
+});
+</script>
+
+</body>
+</html>
