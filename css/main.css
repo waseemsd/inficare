@@ -899,6 +899,58 @@ width: 100%;
     line-height: 1.5;
     color: #444;
 }
+/* Wrap the <a> as a hover area */
+.testimonial-card  {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+/* Overlay */
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 90, 160, 0.45);
+    opacity: 0;
+    transition: 0.3s ease;
+    z-index: 2;
+    pointer-events: none; /* <-- FIX */
+}
+
+/* Zoom Icon */
+.testimonial-card::after {
+    content: "\f00e"; /* FontAwesome search icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 38px;
+    color: #fff;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: 0.3s ease;
+    z-index: 3;
+    pointer-events: none; /* <-- FIX */
+}
+
+/* Hover Effect */
+.testimonial-card:hover::before {
+    opacity: 1;
+}
+.testimonial-card:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Slight Zoom of Card */
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
 
 /*new testimonials css end*/
 
@@ -937,6 +989,15 @@ width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+    min-height: 130px;
+     display: flex;               /* ADD */
+    justify-content: center;     /* center horizontally */
+    align-items: center;  
+}
+.clientbox img{
+     max-width: 100%;
+    max-height: 100px;            /* optional: keeps image height under control */
+    object-fit: contain;
 }
 .clientname{
     text-align: center;
@@ -1486,5 +1547,8 @@ Media Query css start here
     display: flex;
     padding: 30px;
 }
-
+.testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+}
 }

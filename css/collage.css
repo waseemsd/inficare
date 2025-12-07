@@ -64,10 +64,16 @@ body {
 }
 
 .rev_slider li.slide-overlay.slide-overlay-gradient .slotholder:after {
+	background-color: #59bc82;
+	background-image: linear-gradient(to right, #5998bc 0%, #59bc82 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5998bc', endColorstr='#59bc82', GradientType=1 );
+}
+
+/*.rev_slider li.slide-overlay.slide-overlay-gradient .slotholder:after {
 	background-color: #6559bc;
 	background-image: linear-gradient(to right, #6559bc 0%, #934b96 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6559bc', endColorstr='#934b96', GradientType=1 );
-}
+}*/
 
 .rev_slider li.slide-overlay.slide-overlay-gradient.slide-overlay-gradient-animated .slotholder:after {
 	background-size: 200% 200%;
