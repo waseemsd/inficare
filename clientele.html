@@ -38,13 +38,14 @@ window.addEventListener("scroll", function () {
 </script>
 </head>
 <body>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
   <div class="contact"><a href="tel:+917507166337"><img src="img/contact.png" alt="+91 7507166337" /></a></div>
 <!-- Demo Request Form Modal start -->
 <div class="modal fade" id="DemoRequest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-md cartmodalmar">
     <div class="modal-content cartmodalcont">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Request a Demo</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Let's connect to discover the benefits of Whiiz</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -62,7 +63,7 @@ window.addEventListener("scroll", function () {
 
     <div class="mb-3">
       <label class="form-label">Name of Institute</label>
-      <input type="text" class="form-control" name="company" required>
+      <input type="text" class="form-control" name="institute" required>
     </div>
 
     <div class="mb-3">
@@ -72,7 +73,7 @@ window.addEventListener("scroll", function () {
 
     <div class="mb-3">
       <label class="form-label">Mobile Number</label>
-      <input type="tel" class="form-control" name="contact" required>
+      <input type="tel" class="form-control" name="mobileNo" required>
     </div>
 
     <div class="mb-3">
@@ -151,7 +152,7 @@ window.addEventListener("scroll", function () {
                 <li class="menu-item-has-children"><a href="testimonials.html">Testimonials </a></li>
                 <li class="menu-item-has-children"><a href="clientele.html">Our Clientele</a></li>
                 <li class="menu-item-has-children"><a href="contact.html">Contact </a></li>
-                <li class="menu-item-has-children requestdemobtn hidemob"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Request a Demo </a></li>
+                <li class="menu-item-has-children requestdemobtn hidemob"><a href="#" data-bs-toggle="modal" data-bs-target="#DemoRequest">Discover the Benefits </a></li>
               </ul>
             </nav>				
         </div>
@@ -295,7 +296,7 @@ Somaiya Vidyavihar University
                  <img src="img/WadaCollege.jpg" />
             </div>
             <div class="clientname">
-                Wada College
+                Wada College (Dr Shantilal Dhanji Devsey Arts, Commerce and Science College)
             </div>
             </div>
 
@@ -405,7 +406,7 @@ Maharashtra, India.</td>
       </tr>
       <tr>
         <td valign="top" width="20"><i class="fa fa-phone"></i></td>
-        <td><a href="tel:+91 8007860622">+91 8007860622</a></td>
+        <td><a href="tel:+918007860622">+91 8007860622</a> | <a href="tel:+917507166337">+91 7507166337</a></td>
       </tr>
     </table>
     </div>
@@ -470,6 +471,66 @@ Maharashtra, India.</td>
 <script src="js/theme.init.js"></script>
 
 
+<script>
+document.getElementById("demoRequestForm").addEventListener("submit", async function (e) {
+    e.preventDefault();  // Prevent page refresh
 
+    const form = e.target;
+
+    // Validate Terms & Conditions checkbox
+    const agree = document.getElementById("agree");
+    if (!agree.checked) {
+        alert("Please agree to the Terms & Conditions.");
+        return;
+    }
+
+    // Validate Required Fields
+    const formData = new FormData(form);
+    let allFilled = true;
+
+    // Loop through required inputs
+    form.querySelectorAll("[required]").forEach(input => {
+        if (!input.value.trim()) allFilled = false;
+    });
+
+    if (!allFilled) {
+        alert("Please fill all required fields.");
+        return;
+    }
+
+	console.log("Before FormData JSON");
+	
+    // Convert FormData to JSON object
+    const object = {};
+    formData.forEach((value, key) => object[key] = value);
+
+	console.log("After FormData JSON");
+	
+	console.log(JSON.stringify(object));
+
+    try {
+        const response = await fetch("https://ispl.im.whiiz.in/api/public/v1/InficareSupport/SubmitDemoRequest", {
+            method: "POST",
+            headers: 
+			{ 
+				"Content-Type": "application/json",
+				"App-Identifier": "WEB",
+				"TraceID": "ENQUIRY"
+			},
+            body: JSON.stringify(object)
+        });
+
+        if (response.ok) {
+            alert("Form submitted successfully!");
+            form.reset();
+        } else {
+            alert("Error submitting form. Please try again.");
+        }
+    } catch (error) {
+        console.error(error);
+        alert("Network error occurred!");
+    }
+});
+</script>
 </body>
 </html>
